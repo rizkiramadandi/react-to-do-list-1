@@ -6,10 +6,10 @@ export default function Todo({ todo, dispatch, index, isLast }) {
         <div className={'todo-container' + (todo.isComplete ? ' complete':'')} key={todo.id}>
             <div className='move-todo-container'>
                 { index !== 0 ? (
-                    <button onClick={() => dispatch({ type: ACTIONS.MOVE_TODO, payload: { index: index, step: -1 } })}>&nbsp;⬆&nbsp;</button>
+                    <button onClick={() => dispatch({ type: ACTIONS.MOVE_TODO, payload: { index: index, step: -1 } })}>⬆</button>
                 ) : (<></>) }
                 { !isLast ? (
-                    <button onClick={() => dispatch({ type: ACTIONS.MOVE_TODO, payload: { index: index, step: 1 } })}>&nbsp;⬇&nbsp;</button>
+                    <button onClick={() => dispatch({ type: ACTIONS.MOVE_TODO, payload: { index: index, step: 1 } })}>⬇</button>
                 ) : (<></>) }
             </div>
             <div>
