@@ -49,7 +49,7 @@ function reducer(todos, action) {
 }
 
 function App() {
-  const [todos, dispatch] = useReducer(reducer, [])
+  const [todos, dispatch] = useReducer(reducer, [{id: new Date().getTime(), name: 'Learn React.js', isComplete: false}])
   const [name, setName] = useState('')
   const [isCompleteHidden, setIsCompleteHidden] = useState(false)
   const filteredTodos = useMemo(() => {
